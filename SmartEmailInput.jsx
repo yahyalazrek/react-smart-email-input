@@ -28,16 +28,28 @@ export default function SmartEmailInput() {
       const data = await response.json();
 
       if (data.status === 'success') {
+        // 1. Block Disposable Emails
         if (data.checks.is_disposable) {
           setStatus('error');
           setMessage('Please use a permanent email address, not a temporary one.');
           return;
         }
+        
+        // 2. Block Dead Domains
         if (!data.checks.has_mx_records) {
           setStatus('error');
           setMessage('This email domain does not appear to be active.');
           return;
         }
+
+        // 3. Block Role-Based Emails (NEW FEATURE)
+        if (data.checks.is_role_based) {
+          setStatus('error');
+          setMessage('Please use a personal email address, not a generic role (like admin@ or info@).');
+          return;
+        }
+
+        // 4. Suggest Typo Fixes
         if (data.checks.is_typo && data.suggestion) {
           setStatus('error');
           setSuggestion(data.suggestion);
@@ -45,6 +57,7 @@ export default function SmartEmailInput() {
           return;
         }
         
+        // All checks passed
         setStatus('success');
         setMessage('Looks good!');
       } else {

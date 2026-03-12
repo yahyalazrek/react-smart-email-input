@@ -75,7 +75,7 @@ export default function SmartEmailInput() {
   };
 
   return (
-    <div className="flex flex-col max-w-sm gap-2 font-sans">
+    <div className="flex flex-col w-full sm:w-80 gap-2 font-sans">
       <label className="text-sm font-semibold text-gray-700">Work Email</label>
       <input
         type="email"
@@ -83,7 +83,7 @@ export default function SmartEmailInput() {
         onChange={(e) => setEmail(e.target.value)}
         onBlur={() => validateEmail(email)}
         placeholder="you@company.com"
-        className={`px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 transition-colors ${
+        className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 transition-colors ${
           status === 'error' ? 'border-red-500 focus:ring-red-200' :
           status === 'success' ? 'border-green-500 focus:ring-green-200' :
           'border-gray-300 focus:ring-blue-200'

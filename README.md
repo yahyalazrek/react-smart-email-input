@@ -7,12 +7,13 @@ Standard Regex (`^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$`) is no longer enough.
 This component automatically:<br/>
 ✅ Checks if the domain has active MX records (Live DNS check).<br/>
 ✅ Blocks thousands of disposable/burner email providers.<br/>
+✅ Rejects role-based generic emails (`admin@`, `info@`, `support@`) to improve lead quality.<br/>
 ✅ Detects fat-finger typos (e.g., `yaho.com`) and suggests fixes with a 1-click update.<br/>
 
 ## 🚀 Quick Start
 
 **1. Get your API Key (Free)**
-This component is powered by the Edge-optimized Email Validator API. 
+This component is powered by the Edge-optimized EmailGuard API. 
 👉 **[Get your 100 free requests/month API Key here](https://rapidapi.com/yahyalazrek/api/emailguard-disposable-typosquatting-validator-api/)**
 
 **2. Copy the Component**
@@ -29,3 +30,13 @@ To save your API quota, the validation triggers on `onBlur` (when the user click
 <img width="500" height="220" alt="typo" src="https://github.com/user-attachments/assets/3aa5398d-be4c-46dd-b584-d3193a625e48" />
 <img width="500" height="220" alt="invalid_format" src="https://github.com/user-attachments/assets/bff89321-2d71-4fdf-8345-80ea85b8e629" />
 <img width="500" height="220" alt="valid" src="https://github.com/user-attachments/assets/06bd5f19-d827-43e8-85bc-4e417bd7c94a" />
+
+---
+
+## 🔍 Why not just use an Email Validation Regex?
+
+Many developers rely on a standard **email validation regex** in React or Next.js to validate their forms. The problem? **Regex is no longer enough.** 
+
+A javascript regex only checks if the string *looks* like an email (e.g., it contains an `@` symbol and a dot). It will happily accept `fakeuser@temp-mail.org` or `user@gmil.com` because syntactically, they are valid. 
+
+This drop-in component replaces basic regex with a serverless edge API. It performs live DNS queries (checking MX Records) and uses Levenshtein distance algorithms to ensure the email is actually real, active, and typo-free before it ever hits your database. Stop relying on regex and start validating reality.

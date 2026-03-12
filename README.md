@@ -25,11 +25,12 @@ Replace the `RAPIDAPI_KEY` string at the top of the file with your key.
 ## 💡 How it works
 To save your API quota, the validation triggers on `onBlur` (when the user clicks out of the input field). This ensures you only use 1 API request per user signup, keeping your costs incredibly low.
 
-<img width="500" height="220" alt="not_active" src="https://github.com/user-attachments/assets/9f6d5676-af3e-4043-ac97-8185b31d8ee5" />
-<img width="500" height="220" alt="tempo" src="https://github.com/user-attachments/assets/35eea804-a04c-4c0b-a769-aadf09612856" />
-<img width="500" height="220" alt="typo" src="https://github.com/user-attachments/assets/3aa5398d-be4c-46dd-b584-d3193a625e48" />
-<img width="500" height="220" alt="invalid_format" src="https://github.com/user-attachments/assets/bff89321-2d71-4fdf-8345-80ea85b8e629" />
-<img width="500" height="220" alt="valid" src="https://github.com/user-attachments/assets/06bd5f19-d827-43e8-85bc-4e417bd7c94a" />
+<img width="640" height="400" alt="not_active" src="https://github.com/user-attachments/assets/b2c8747b-6015-4485-877c-723fdfa27544" />
+<img width="640" height="400" alt="tempo" src="https://github.com/user-attachments/assets/27fdb5ca-2cff-4f00-8938-38d97fec59d0" />
+<img width="640" height="400" alt="role_based_email" src="https://github.com/user-attachments/assets/3bdc881c-b68f-4fe7-9cdb-caa86fe60890" />
+<img width="640" height="400" alt="typo" src="https://github.com/user-attachments/assets/7eae0a86-7acd-4f4a-944f-4e2f6243b7e4" />
+<img width="640" height="400" alt="invalid_format" src="https://github.com/user-attachments/assets/f945372f-5ddc-4b9f-92cf-169cd748814b" />
+<img width="640" height="400" alt="valid" src="https://github.com/user-attachments/assets/c301ce2c-9634-4b33-9703-5635956c5407" />
 
 ---
 
